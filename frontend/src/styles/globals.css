@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply border-border;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-background text-foreground;
+}
+
+.gauge-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.map-container {
+  width: 100%;
+  height: 500px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.chart-container {
+  position: relative;
+  height: 400px;
+  margin: 20px 0;
+}
+
+.anomaly-card {
+  @apply p-4 rounded-lg border-l-4;
+}
+
+.anomaly-card.high {
+  @apply bg-red-50 border-red-500;
+}
+
+.anomaly-card.medium {
+  @apply bg-yellow-50 border-yellow-500;
+}
+
+.anomaly-card.low {
+  @apply bg-blue-50 border-blue-500;
+}
